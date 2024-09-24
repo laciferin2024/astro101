@@ -1,0 +1,41 @@
+name: Build Astro
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Setup Bun
+        run: |
+          npm install -g bun
+
+      - name: Install dependencies
+        run: bun i
+
+      - name: Build project
+        run: bun run build
+
+      # If you want to cache npm dependencies
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-node-

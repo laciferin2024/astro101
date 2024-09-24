@@ -21,6 +21,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.join(__dirname, "build"),
+    // outDir: path.join(__dirname, "build"),
   },
 })

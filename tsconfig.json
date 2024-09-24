@@ -1,6 +1,8 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+		"types": ["vite/client", "node", "@types/chrome"],
+
     		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,

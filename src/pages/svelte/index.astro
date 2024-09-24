@@ -11,6 +11,6 @@ import Counter from '@components/Counter.svelte';
     <p>This is an example of integrating Svelte into an Astro project:</p>
     
     <!-- Embed the Svelte Counter component -->
-    <Counter />
+    <Counter  client:only="svelte" />
   </body>
 </html>

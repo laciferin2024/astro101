@@ -1,5 +1,5 @@
 <script lang="ts">
-  let count = 0 ;
+  let count = $state(0) ;
 
 
   const increment = () => {

@@ -20,6 +20,10 @@
     "@sveltejs/adapter-static": "^3.0.2",
     "prettier-plugin-svelte": "^3.2.5",
     "svelte": "^5.0.0-next.184",
-    "svelte-check": "^3.8.4"
+    "svelte-check": "^3.8.4",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
+  },
+  "devDependencies": {
+    "path": "^0.12.7"
   }
 }

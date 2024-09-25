@@ -1,11 +1,10 @@
-export async function get() {
-  const users = [
-    { id: 1, name: "Alice" },
-    { id: 2, name: "Bob" },
-    { id: 3, name: "Charlie" },
-  ]
+import type { APIRoute } from "astro"
 
-  return {
-    body: JSON.stringify(users),
-  }
+export const GET: APIRoute = async ({ request, redirect }) => {
+  // const formData = await request.formData();
+  // console.log({formData})
+
+  console.log("GET")
+
+  return redirect("/")
 }

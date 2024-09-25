@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro"
 
-export const prerender = true //opt for SSR custom endpoints turn into live server endpoints that are called on request
+export const prerender = true //opt for SSR custom endpoints turn into live server endpoints that are called on requestgtt
 
 export const GET = async ({ params, request }) => {
   console.log({ params })

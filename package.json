@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "rimraf dist",
     "build": "astro check && astro build",
     "b": "astro build",
     "preview": "astro preview",
@@ -24,6 +25,7 @@
     "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
   },
   "devDependencies": {
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "rimraf": "^6.0.1"
   }
 }
